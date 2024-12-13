@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片压缩工具</h1>
+        <div id="uploadArea" class="upload-area">
+            <input type="file" id="fileInput" accept="image/*">
+            <label for="fileInput" class="upload-button">选择图片</label>
+            <p>或将图片拖放到此处</p>
+        </div>
+        
+        <div id="compressionControls" class="compression-controls" style="display: none;">
+            <div class="slider-container">
+                <label for="qualitySlider">压缩质量: <span id="qualityValue">80%</span></label>
+                <input type="range" id="qualitySlider" min="1" max="100" value="80">
+            </div>
+        </div>
+
+        <div id="previewContainer" class="preview-container" style="display: none;">
+            <div class="preview-box">
+                <h3>原始图片</h3>
+                <img id="originalPreview" alt="原始图片预览">
+                <div class="file-info">
+                    大小: <span id="originalSize">0 KB</span>
+                </div>
+            </div>
+            <div class="preview-box">
+                <h3>压缩后</h3>
+                <img id="compressedPreview" alt="压缩后预览">
+                <div class="file-info">
+                    大小: <span id="compressedSize">0 KB</span>
+                </div>
+            </div>
+        </div>
+
+        <button id="downloadBtn" class="download-btn" style="display: none;">
+            下载压缩后的图片
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
